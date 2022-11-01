@@ -77,7 +77,7 @@ public class FileManager extends AbstractView {
 		bf.append("_");
 
 		//파일명과 확장자 분리
-		String ex = multipartFile.getOriginalFilename();//아이유.jpg
+		String ex = multipartFile.getOriginalFilename();
 		ex = ex.substring(ex.lastIndexOf("."));
 
 		//bf.append(multipartFile.getOriginalFilename());

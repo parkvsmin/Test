@@ -40,16 +40,15 @@ public class QnaController {
 	
 	@GetMapping("add")
 	public String setAdd(@ModelAttribute QnaVO qnaVO)throws Exception {
-		return "qna/write";
+		return "qna/add";
 	
 	}
 	
 	@PostMapping("add")
 	public ModelAndView setAdd(@Valid QnaVO qnaVO, BindingResult bindingResult, RedirectAttributes redirectAttributes, ModelAndView mv)throws Exception {
+		//검증
 		if(bindingResult.hasErrors()) {
-			//검승 실패하면 회원가입 jsp로 이동
-			log.info("=====검증오류=====");
-			mv.setViewName("qna/write");
+			mv.setViewName("qna/add");
 			return mv;
 		}
 		

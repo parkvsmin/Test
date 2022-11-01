@@ -43,19 +43,8 @@
           <button type="button" id="fileAdd">파일추가</button>
         </div>
 
-        <!-- <c:forEach items="${qnaVO.qnaFileVOs}" var="qnaFileVO">
-          <div class="mb-3">
-            <span class="form-control">${qnaFileVO.oriName}</span>
-            <button type="button" class="fileDelete" data-file-num="${qnaFileVO.fileNum}">삭제</button>
-          </div>
-        </c:forEach> -->
-
-        <!-- <div class="mb-3">
-          <a href="./delete" class="btn btn-primary">글삭제</a>
-        </div> -->
-
         <div class="mb-3">
-          <button class="btn btn-primary">제출</button>
+          <button class="btn btn-dark">제출</button>
         </div>
 
       </form>

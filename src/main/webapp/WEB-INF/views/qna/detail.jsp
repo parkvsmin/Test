@@ -10,13 +10,14 @@
 </head>
 <body>
 	
-	<h1>Detail Page</h1>
-	<h3>Title : ${detail.title}</h3>
+	<h1>글 상세보기</h1>
+	<%-- <h3>Title : ${detail.title}</h3> --%>
 	
 	<c:forEach items="${detail.qnaFileVOs}" var="fileVO">
 		<img alt="" src="/file/qna/${fileVO.fileName}">
+		<%-- <a href="/fileDown/qna?fileNum=${fileVO.fileNum}">${fileVO.oriName}</a> --%>
 	</c:forEach>
-	<table border="1">
+	<table class="table table-striped">
 				<tr>
 					<th>글번호</th>
 					<th>작성자</th>
@@ -37,7 +38,7 @@
 	</table>
 	
 <div>
-		<a href="update?num=${detail.num}">글수정</a>
+		<a href="update?num=${detail.num}" class="btn btn-dark">글수정</a>
 	</div>
 	
 	

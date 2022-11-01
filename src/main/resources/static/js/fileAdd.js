@@ -17,14 +17,14 @@ $("#fileAdd").click(function () {
 
   if (count < 5) {
     let r = '<div class="mb-3">';
-    r = r + '<label for="contents" class="form-label">Contents</label>';
-    r = r + '<input type="file" name="files">';
-    r = r + '<button type="button" class="del">X</button>'
+    r = r + '<label for="contents" class="form-label">File</label>';
+    r = r + '<input type="file" name="files" >';
+    //r = r + '<button type="button" class="del">X</button>'
     r = r + '</div>';
     $("#fileAddResult").append(r);
     count++;
   } else {
-    alert("최대 5개만 가능")
+    alert("최대 5개")
   }
 
 });
@@ -39,7 +39,7 @@ let flag = true;
 // 글 수정시 첨부파일 삭제
 $(".deleteFile").click(function () {
   //DB, HDD에 파일 삭제
-  let check = confirm("삭제 됩니다");
+  let check = confirm("삭제한다");
   if (flag) {
     let size = $("#fileAddResult").attr("data-file-size");
     if(size==undefined) {

@@ -13,13 +13,14 @@
 			<when test="kind =='writer'">writer</when>
 			<otherwise>contents</otherwise>
 		</choose>
-		TITLE LIKE CONCAT('%', #{search}, '%')
+		LIKE CONCAT('%', #{search}, '%')
 	</sql>
 
 	<select id="getList" resultType="QnaVO" parameterType="Pager">
-		SELECT *
+		<!-- <include refid="search"></include> -->
+		(SELECT *
 		FROM QNA
-		ORDER BY NUM DESC
+		ORDER BY NUM DESC)
 		LIMIT #{startRow}, #{perPage}
 	</select>
 

@@ -11,8 +11,10 @@
 <body>
 	<h1>게시판 리스트</h1>
 	
+				<form action="./list"
+					class="row row-cols-lg-auto g-3 align-items-center">
 			<div class="col-12">
-						<label class="visually-hidden" for="Kind">검색</label> <select
+						 <select
 							name="kind" class="form-select" id="Kind">
 							<option class="kinds" value="num">글번호</option>
 							<option class="kinds" value="writer">작성자</option>
@@ -29,10 +31,11 @@
 					</div>
 					
 					<div class="col-12">
-						<button type="submit" class="btn btn-primary">검색어찾기</button>
+						<button type="submit" class="btn btn-dark">검색어찾기</button>
 					</div>
+					</form>
 	
-	<table border="1">
+	<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>글번호</th>
@@ -58,8 +61,27 @@
 				</tbody>
 			</table>
 			
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<c:if test="${pager.pre}">
+						<li class="page-item"><a class="page-link"
+							href="./list?page=${pager.startNum-1}&kind=${pager.kind}&search=${pager.search}">Previous</a>
+						</li>
+					</c:if>
+					<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+						<li class="page-item"><a class="page-link"
+							href="./list?page=${i}&kind=${pager.kind}&search=${pager.search}">${i}</a></li>
+					</c:forEach>
+
+					<li class="page-item ${pager.next?'':'disabled'}"><a
+						class="page-link"
+						href="./list?page=${pager.lastNum+1}&kind=${pager.kind}&search=${pager.search}">Next</a>
+					</li>
+				</ul>
+			</nav>
+			
 			<div class="mb-3">
-				<a href="./add" class="btn btn-primary">글쓰기</a>
+				<a href="./add" class="btn btn-dark">글쓰기</a>
 			</div>
 			
 			<script type="text/javascript">
