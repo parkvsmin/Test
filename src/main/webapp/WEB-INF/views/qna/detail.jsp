@@ -37,9 +37,9 @@
 			</tr>
 	</table>
 	
-<div>
+ <%--    <div>
 		<a href="update?num=${detail.num}" class="btn btn-dark">글수정</a>
-	</div>
+	</div> --%>
 	
 	
 	
