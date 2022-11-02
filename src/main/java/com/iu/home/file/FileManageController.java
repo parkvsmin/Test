@@ -23,11 +23,11 @@ public class FileManageController {
 		
 		ModelAndView mv = new ModelAndView();
 		//DB에서 정보 조회
-		if(path.equals("qna")) {
-			
-		}else if(path.equals("notice"))
-		qnaFileVO.setFileName("75aaf265-c34f-4ed6-a881-1d152e806b18_iu.jpg");
-		qnaFileVO.setOriName("iu2.jpg");
+//		if(path.equals("qna")) {
+//			
+//		}else if(path.equals("notice"))
+		qnaFileVO.setFileName("fa0b5698-0a27-4719-ac30-422ae015fd8d_iu.jpg");
+		qnaFileVO.setOriName("iu.jpg");
 		
 		mv.addObject("fileVO", qnaFileVO);
 		mv.addObject("path", path);

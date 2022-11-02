@@ -1,6 +1,4 @@
 
-console.log("fileAdd");
-
 //파일의 갯수를 지정하는 변수
 let count = 0;
 
@@ -19,7 +17,7 @@ $("#fileAdd").click(function () {
     let r = '<div class="mb-3">';
     r = r + '<label for="contents" class="form-label">File</label>';
     r = r + '<input type="file" name="files" >';
-    //r = r + '<button type="button" class="del">X</button>'
+    r = r + '<button type="button" class="del">X</button>'
     r = r + '</div>';
     $("#fileAddResult").append(r);
     count++;

@@ -11,11 +11,10 @@
 <body>
 	
 	<h1>글 상세보기</h1>
-	<%-- <h3>Title : ${detail.title}</h3> --%>
 	
 	<c:forEach items="${detail.qnaFileVOs}" var="fileVO">
 		<img alt="" src="/file/qna/${fileVO.fileName}">
-		<%-- <a href="/fileDown/qna?fileNum=${fileVO.fileNum}">${fileVO.oriName}</a> --%>
+		<a href="/fileDown/qna?fileNum=${fileVO.fileNum}">${fileVO.oriName}</a>
 	</c:forEach>
 	<table class="table table-striped">
 				<tr>
