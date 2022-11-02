@@ -17,17 +17,15 @@ public class FileManageController {
 	@Autowired
 	private QnaService qnaService;
 	
-	@GetMapping("/fileDown/{p}")
+	@GetMapping("/resources/down/{p}")
 	public ModelAndView fileDown(@PathVariable(name = "p") String path, QnaFileVO qnaFileVO)throws Exception{
 		log.info("Path : {} ", path);
 		
 		ModelAndView mv = new ModelAndView();
 		//DB에서 정보 조회
-//		if(path.equals("qna")) {
-//			
-//		}else if(path.equals("notice"))
-		qnaFileVO.setFileName("fa0b5698-0a27-4719-ac30-422ae015fd8d_iu.jpg");
-		qnaFileVO.setOriName("iu.jpg");
+		if(path.equals("qna")) {
+			qnaFileVO = qnaService.getFileDetail(qnaFileVO);
+		}
 		
 		mv.addObject("fileVO", qnaFileVO);
 		mv.addObject("path", path);
