@@ -64,7 +64,7 @@
 
 				<div class="row justify-content-end">
 					<div>
-						<button type="submit" id="joinButton" class="btn btn-primary mb-3">가입하기</button>
+						<button type="submit" id="joinButton" class="btn btn-dark">가입하기</button>
 					</div>
 				</div>
 			</form:form>
