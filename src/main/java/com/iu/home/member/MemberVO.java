@@ -17,10 +17,8 @@ import lombok.Data;
 public class MemberVO implements UserDetails {
 
 	private String id;
-	@NotBlank(message = "중복된 ID")
 	private String idCheck;
 	private String password;
-	@NotBlank(message = "비밀번호를 재입력")
 	private String passwordCheck;
 	private String name;
 	private String email;
